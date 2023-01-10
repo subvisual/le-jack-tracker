@@ -21,7 +21,6 @@ function parseRow(data: Record<string, any>, id: number): EventType | null {
   try {
     const start = dateFromStr(cols[1].v);
     const end = dateFromStr(cols[2].v);
-    console.log(end.getTime() - start.getTime());
 
     return {
       id,
