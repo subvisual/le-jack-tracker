@@ -25,7 +25,7 @@
 <h2 class="name">{monthName}</h2>
 
 <section class="month" style="--track-height: {height}rem">
-  {#each month.days as day}
+  {#each month.days as day, monthIdx}
     {@const isStartOfMonth = day.current.getDate() === 1}
     {@const isStartOfWeek = day.current.getDay() === 0}
     {@const offset = isStartOfMonth ? day.current.getDay() + 1 : '0'}
@@ -46,6 +46,7 @@
       <div class="events">
         {#each day.events as evt}
           {@const extend =
+            month.days[monthIdx + 1] &&
             evt.duration >= 3 &&
             evt.duration - evt.progress >= 2 &&
             day.current.getDay() < 4}
@@ -135,9 +136,6 @@
     text-decoration: none;
     border: 1px solid transparent;
   }
-  .event-line.extend {
-    overflow: visible;
-  }
   .event-name {
     position: relative;
     z-index: 1;
@@ -147,9 +145,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .event-name.extend {
-    text-overflow: none;
-    overflow: visible;
+  @media screen and (min-width: 40em) {
+    .event-line.extend {
+      overflow: visible;
+    }
+    .event-name.extend {
+      text-overflow: none;
+      overflow: visible;
+    }
   }
   .activeEvent {
     border-top: 1px solid #242424;
@@ -168,8 +171,5 @@
   .firstDay {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
-  }
-  .clip .event-name {
-    line-height: 1.4;
   }
 </style>
