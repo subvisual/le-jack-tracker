@@ -1,13 +1,10 @@
-export type Event = {
-  name: string;
-  startDate: string | Date;
-  endDate: string | Date;
-  city: string;
-  country: string;
-  region: string;
-  url: string;
-  twitter: string;
-};
+import type { EventType } from '$lib/stores/eventsCalendar';
+
+export function extractJSON(text: string) {
+  const innerJSON = text.substring(47).slice(0, -2);
+
+  return JSON.parse(innerJSON);
+}
 
 function dateFromStr(str: string) {
   const [y, m, d] = str
@@ -18,7 +15,7 @@ function dateFromStr(str: string) {
   return new Date(`${y}-${m + 1}-${d}`);
 }
 
-function parseRow(data: Record<string, any>): Event | null {
+function parseRow(data: Record<string, any>): EventType | null {
   const cols = data.c;
 
   try {
@@ -37,7 +34,7 @@ function parseRow(data: Record<string, any>): Event | null {
   }
 }
 
-export default function parseSheet(data: Record<string, any>): Event[] {
+export function parseSheet(data: Record<string, any>): EventType[] {
   const { rows } = data.table;
 
   const events = rows
@@ -46,12 +43,4 @@ export default function parseSheet(data: Record<string, any>): Event[] {
     .filter(Boolean);
 
   return events;
-}
-
-export function eventInDate(events: Event[], date: Date) {
-  const relevant = events.filter(
-    (evt) => new Date(evt.startDate) <= date && new Date(evt.endDate) >= date
-  );
-
-  return relevant;
 }

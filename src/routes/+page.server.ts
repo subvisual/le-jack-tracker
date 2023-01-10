@@ -1,6 +1,5 @@
 import mock from '$lib/mock';
-import type { Event } from '$lib/parseSheet';
-import extractJSON from '../lib/extractJSON';
+import { parseSheet, extractJSON } from '$lib/parseSheet';
 import type { PageServerLoad } from './$types';
 
 const ENDPOINT =
@@ -11,7 +10,7 @@ export const load: PageServerLoad = async () => {
   const data = extractJSON(await req.text());
   const events = parseSheet(data); */
 
-  const events = mock as Event[];
+  const events = mock;
 
   return {
     events
