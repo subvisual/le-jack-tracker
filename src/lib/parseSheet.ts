@@ -18,18 +18,22 @@ function dateFromStr(str: string) {
 
 function parseRow(data: Record<string, any>, id: number): EventType | null {
   const cols = data.c;
-
   try {
+    const start = dateFromStr(cols[1].v);
+    const end = dateFromStr(cols[2].v);
+    console.log(end.getTime() - start.getTime());
+
     return {
       id,
       name: cols[0].v,
-      startDate: dateFromStr(cols[1].v),
-      endDate: dateFromStr(cols[2].v),
+      startDate: start,
+      endDate: end,
       city: cols[3].v,
       country: cols[4].v,
       region: cols[5].v,
       url: cols[6].v,
-      twitter: cols[7].v
+      twitter: cols[7].v,
+      duration: (end.getTime() - start.getTime()) / 1000 / 60 / 60 / 24 + 1
     };
   } catch {
     return null;

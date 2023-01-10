@@ -11,12 +11,14 @@ export type EventType = {
   region: string;
   url: string;
   twitter: string;
+  duration: number;
   color?: string;
 };
 
 export type EventInDay = EventType & {
   isLastDay?: boolean;
   isFirstDay?: boolean;
+  progress: number;
   line: number;
 };
 
@@ -44,7 +46,7 @@ function eventsCalendar() {
     events: [],
     calendar: [],
     year: new Date().getFullYear(),
-    active: -1
+    active: 51
   });
 
   function create(events: EventType[]) {
@@ -91,18 +93,26 @@ function eventsCalendar() {
   function buildCalendar(allEvents: EventType[]) {
     const cal = [];
     const year = get(store).year;
+    let eventsProgress: Record<number, number> = {};
 
     for (let i = 1; i <= MONTHS_IN_YEAR; i++) {
       const month: Month = {
         current: new Date(year, i - 1),
         days: []
       };
-      let linesTrack = {};
+      let linesTrack: Record<number, number> = {};
 
       for (let j = 1; j <= daysInMonth(i, year); j++) {
         const current = new Date(`${year}-${padDateStr(i)}-${padDateStr(j)}`);
-        const { events, lines } = eventsInDate(allEvents, current, linesTrack);
+        const { events, lines, evtProgress } = eventsInDate(
+          allEvents,
+          current,
+          linesTrack,
+          eventsProgress
+        );
         linesTrack = lines;
+        eventsProgress = evtProgress;
+
         month.days.push({ current, events });
       }
 
@@ -114,7 +124,12 @@ function eventsCalendar() {
     return cal;
   }
 
-  function eventsInDate(events: EventType[], date: Date, lines: any) {
+  function eventsInDate(
+    events: EventType[],
+    date: Date,
+    lines: Record<number, number>,
+    evtProgress: Record<number, number>
+  ) {
     const rel: EventInDay[] = [];
     const linesToDel = [];
 
@@ -127,6 +142,12 @@ function eventsCalendar() {
 
       if (!inRange) {
         continue;
+      }
+
+      if (!(events[i].id in evtProgress)) {
+        evtProgress[events[i].id] = 1;
+      } else {
+        evtProgress[events[i].id]++;
       }
 
       const isLastDay =
@@ -153,12 +174,18 @@ function eventsCalendar() {
         linesToDel.push(events[i].id);
       }
 
-      rel.push({ ...events[i], isLastDay, isFirstDay, line });
+      rel.push({
+        ...events[i],
+        isLastDay,
+        isFirstDay,
+        line,
+        progress: evtProgress[events[i].id]
+      });
     }
 
     linesToDel.forEach((id) => delete lines[id]);
 
-    return { events: rel, lines };
+    return { events: rel, lines, evtProgress };
   }
 
   return {
