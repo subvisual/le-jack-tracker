@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Month } from '$lib/stores/eventsCalendar';
+  import url from '$lib/util/url';
 
   export let month: Month;
 
@@ -17,7 +18,7 @@
       </p>
       <div class="events">
         {#each day.events as evt}
-          <a href={evt.url} target="_blank" rel="noreferrer">{evt.name}</a>
+          <a href={url(evt.url)} target="_blank" rel="noreferrer">{evt.name}</a>
         {/each}
       </div>
     </div>

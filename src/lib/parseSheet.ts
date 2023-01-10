@@ -1,4 +1,5 @@
 import type { EventType } from '$lib/stores/eventsCalendar';
+import padDateStr from './util/padDateStr';
 
 export function extractJSON(text: string) {
   const innerJSON = text.substring(47).slice(0, -2);
@@ -12,7 +13,7 @@ function dateFromStr(str: string) {
     .split(',')
     .map((c) => Number(c));
 
-  return new Date(`${y}-${m + 1}-${d}`);
+  return new Date(`${y}-${padDateStr(m + 1)}-${padDateStr(d)}`);
 }
 
 function parseRow(data: Record<string, any>): EventType | null {

@@ -1,3 +1,4 @@
+import padDateStr from '$lib/util/padDateStr';
 import { get, writable } from 'svelte/store';
 
 export type EventType = {
@@ -59,7 +60,7 @@ function eventsCalendar() {
       };
 
       for (let j = 1; j <= daysInMonth(i, year); j++) {
-        const current = new Date(`${year}-${i}-${j}`);
+        const current = new Date(`${year}-${padDateStr(i)}-${padDateStr(j)}`);
         const events = eventsInDate(allEvents, current);
         month.days.push({ current, events });
       }
