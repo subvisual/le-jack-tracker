@@ -2,6 +2,7 @@ import padDateStr from '$lib/util/padDateStr';
 import { get, writable } from 'svelte/store';
 
 export type EventType = {
+  id: number;
   name: string;
   startDate: string | Date;
   endDate: string | Date;
@@ -10,11 +11,18 @@ export type EventType = {
   region: string;
   url: string;
   twitter: string;
+  color?: string;
+};
+
+export type EventInDay = EventType & {
+  isLastDay?: boolean;
+  isFirstDay?: boolean;
+  line: number;
 };
 
 type Day = {
   current: Date;
-  events: EventType[];
+  events: EventInDay[];
 };
 
 export type Month = {
@@ -26,6 +34,7 @@ export type EventsCalendar = {
   year: number;
   events: EventType[];
   calendar: Month[];
+  active: number;
 };
 
 const MONTHS_IN_YEAR = 12;
@@ -34,14 +43,44 @@ function eventsCalendar() {
   const store = writable<EventsCalendar>({
     events: [],
     calendar: [],
-    year: new Date().getFullYear()
+    year: new Date().getFullYear(),
+    active: -1
   });
 
   function create(events: EventType[]) {
-    store.set({
-      events,
-      calendar: buildCalendar(events),
-      year: new Date().getFullYear()
+    const evts = processEvents(events);
+
+    store.update((st) => ({
+      ...st,
+      events: processEvents(evts),
+      calendar: buildCalendar(evts)
+    }));
+  }
+
+  function processEvents(events: EventType[]) {
+    const colors = [
+      '#e4e4e7',
+      '#fecaca',
+      '#fed7aa',
+      '#fef08a',
+      '#d9f99d',
+      '#a7f3d0',
+      '#bae6fd',
+      '#c7d2fe',
+      '#e9d5ff',
+      '#fbcfe8'
+    ];
+    let index = 0;
+
+    return events.map((item) => {
+      const out = {
+        ...item,
+        color: colors[index]
+      };
+
+      index = index === colors.length - 1 ? 0 : index + 1;
+
+      return out;
     });
   }
 
@@ -58,10 +97,12 @@ function eventsCalendar() {
         current: new Date(year, i - 1),
         days: []
       };
+      let linesTrack = {};
 
       for (let j = 1; j <= daysInMonth(i, year); j++) {
         const current = new Date(`${year}-${padDateStr(i)}-${padDateStr(j)}`);
-        const events = eventsInDate(allEvents, current);
+        const { events, lines } = eventsInDate(allEvents, current, linesTrack);
+        linesTrack = lines;
         month.days.push({ current, events });
       }
 
@@ -73,28 +114,56 @@ function eventsCalendar() {
     return cal;
   }
 
-  function eventsInDate(events: EventType[], date: Date) {
-    const rel: EventType[] = [];
-    let hasFoundEvt = false;
+  function eventsInDate(events: EventType[], date: Date, lines: any) {
+    const rel: EventInDay[] = [];
+    const linesToDel = [];
 
     for (let i = 0; i < events.length; i++) {
+      let line = 0;
+
       const inRange =
         new Date(events[i].startDate) <= date &&
         new Date(events[i].endDate) >= date;
 
-      if (inRange) {
-        rel.push(events[i]);
-        hasFoundEvt = true;
-      } else if (hasFoundEvt) {
-        break;
+      if (!inRange) {
+        continue;
       }
+
+      const isLastDay =
+        new Date(events[i].endDate).getTime() === date.getTime();
+      const isFirstDay =
+        new Date(events[i].startDate).getTime() === date.getTime();
+
+      const lineNotRegistered = !(events[i].id in lines);
+
+      if (isFirstDay || lineNotRegistered) {
+        const takenLines = Object.values(lines);
+        for (let freeLine = 0; freeLine < 20; freeLine++) {
+          if (!takenLines.includes(freeLine)) {
+            line = freeLine;
+            lines[events[i].id] = freeLine;
+            break;
+          }
+        }
+      } else {
+        line = lines[events[i].id];
+      }
+
+      if (isLastDay) {
+        linesToDel.push(events[i].id);
+      }
+
+      rel.push({ ...events[i], isLastDay, isFirstDay, line });
     }
 
-    return rel;
+    linesToDel.forEach((id) => delete lines[id]);
+
+    return { events: rel, lines };
   }
 
   return {
     subscribe: store.subscribe,
+    set: store.set,
     buildCalendar,
     create
   };
