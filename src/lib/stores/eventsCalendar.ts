@@ -119,8 +119,6 @@ function eventsCalendar() {
       cal.push(month);
     }
 
-    console.log(cal);
-
     return cal;
   }
 
