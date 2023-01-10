@@ -10,9 +10,16 @@
     month: 'short'
   });
 
-  const isActive = (id: number) => $eventsCalendar.active === id;
-  const highestTrackValue = (events: EventInDay[]) =>
-    events.sort((a, b) => (a.line > b.line ? -1 : 1))?.[0]?.line || 0;
+  const dayBlockHeight = (events: EventInDay[]) => {
+    if (events.length < 3) {
+      return '100px';
+    }
+
+    const highestLine = events.sort((a, b) => (a.line > b.line ? -1 : 1))?.[0]
+      ?.line;
+
+    return `${(highestLine + 2) * height + 0.5}rem`;
+  };
 </script>
 
 <h2 class="name">{monthName}</h2>
@@ -21,13 +28,12 @@
   {#each month.days as day}
     {@const isStartOfMonth = day.current.getDate() === 1}
     {@const isStartOfWeek = day.current.getDay() === 0}
-    {@const offset = isStartOfMonth ? day.current.getDay() + 1 : 0}
+    {@const offset = isStartOfMonth ? day.current.getDay() + 1 : '0'}
 
     <div
       class="day"
       class:clip={day.events.length > 1}
-      style="height: {(highestTrackValue(day.events) + 2) *
-        height}rem; grid-column-start: {offset}"
+      style="min-height: {dayBlockHeight(day.events)}; --offset: {offset}"
     >
       <div class="date-line">
         <p class="day-digit">
@@ -46,7 +52,7 @@
             class="event-line"
             class:lastDay={evt.isLastDay}
             class:firstDay={evt.isFirstDay}
-            class:activeEvent={isActive(evt.id)}
+            class:activeEvent={$eventsCalendar.active === evt.id}
             style="background: {evt.color}; top: {(evt.line + 1) * height}rem"
             on:mouseenter={() => {
               $eventsCalendar.active = evt.id;
@@ -80,7 +86,7 @@
   }
   .month {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem 0;
     margin-bottom: 2rem;
     padding-bottom: 1rem;
@@ -89,6 +95,15 @@
     position: relative;
     min-height: 100px;
     border-bottom: 1px solid #eee;
+  }
+
+  @media screen and (min-width: 40em) {
+    .month {
+      grid-template-columns: repeat(7, 1fr);
+    }
+    .day {
+      grid-column-start: var(--offset);
+    }
   }
   .date-line {
     display: flex;

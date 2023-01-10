@@ -67,6 +67,6 @@
     margin-bottom: 1em;
   }
   .description {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
   }
 </style>
