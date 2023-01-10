@@ -1,5 +1,6 @@
 export default [
   {
+    id: 0,
     name: 'MetaBlock Summit',
     startDate: '2023-01-10T00:00:00.000Z',
     endDate: '2023-01-10T00:00:00.000Z',
@@ -10,6 +11,7 @@ export default [
     twitter: 'https://twitter.com/LegionNetwork_'
   },
   {
+    id: 1,
     name: 'Crypto Finance Conference St. Moritz',
     startDate: '2023-01-11T00:00:00.000Z',
     endDate: '2023-01-13T00:00:00.000Z',
@@ -20,6 +22,7 @@ export default [
     twitter: 'https://twitter.com/CFCstmoritz'
   },
   {
+    id: 2,
     name: 'World Crypto Conference 2023',
     startDate: '2023-01-13T00:00:00.000Z',
     endDate: '2023-01-15T00:00:00.000Z',
@@ -30,6 +33,7 @@ export default [
     twitter: 'https://twitter.com/WorldCryptoC'
   },
   {
+    id: 3,
     name: 'iFX Expo',
     startDate: '2023-01-16T00:00:00.000Z',
     endDate: '2023-01-18T00:00:00.000Z',
@@ -40,6 +44,7 @@ export default [
     twitter: 'https://twitter.com/iFXEXPO'
   },
   {
+    id: 4,
     name: 'Space Warp Hackathon',
     startDate: '2023-01-20T00:00:00.000Z',
     endDate: '2023-02-10T00:00:00.000Z',
@@ -50,6 +55,7 @@ export default [
     twitter: 'https://twitter.com/ethglobal'
   },
   {
+    id: 5,
     name: 'Metacon',
     startDate: '2023-01-24T00:00:00.000Z',
     endDate: '2023-01-25T00:00:00.000Z',
@@ -60,6 +66,7 @@ export default [
     twitter: 'https://twitter.com/Metaconglobal'
   },
   {
+    id: 6,
     name: 'Quantum Miami',
     startDate: '2023-01-25T00:00:00.000Z',
     endDate: '2023-01-27T00:00:00.000Z',
@@ -70,6 +77,7 @@ export default [
     twitter: 'https://twitter.com/quantum_miami'
   },
   {
+    id: 7,
     name: 'Block World Tour Granada',
     startDate: '2023-01-25T00:00:00.000Z',
     endDate: '2023-01-27T00:00:00.000Z',
@@ -80,6 +88,7 @@ export default [
     twitter: 'https://twitter.com/Blockworldtour'
   },
   {
+    id: 9,
     name: 'Solana Hacker House Istanbul',
     startDate: '2023-02-01T00:00:00.000Z',
     endDate: '2023-02-05T00:00:00.000Z',
@@ -90,6 +99,7 @@ export default [
     twitter: 'https://twitter.com/hackerhouses'
   },
   {
+    id: 10,
     name: 'StarkWare Sessions 2023',
     startDate: '2023-02-05T00:00:00.000Z',
     endDate: '2023-02-06T00:00:00.000Z',
@@ -100,6 +110,7 @@ export default [
     twitter: 'https://twitter.com/Starknet_edu'
   },
   {
+    id: 11,
     name: 'Building Blocks TLV',
     startDate: '2023-02-07T00:00:00.000Z',
     endDate: '2023-02-07T00:00:00.000Z',
@@ -110,6 +121,7 @@ export default [
     twitter: 'https://twitter.com/BuildingBlock_s'
   },
   {
+    id: 12,
     name: 'Penn Blockchain Conference',
     startDate: '2023-02-10T00:00:00.000Z',
     endDate: '2023-02-12T00:00:00.000Z',
@@ -120,6 +132,7 @@ export default [
     twitter: 'https://twitter.com/pennblockchain'
   },
   {
+    id: 13,
     name: 'The Blockchain Event',
     startDate: '2023-02-14T00:00:00.000Z',
     endDate: '2023-02-17T00:00:00.000Z',
@@ -130,6 +143,7 @@ export default [
     twitter: 'https://twitter.com/BlockchainEvent'
   },
   {
+    id: 14,
     name: 'Metaverse Summit LATAM',
     startDate: '2023-02-15T00:00:00.000Z',
     endDate: '2023-02-16T00:00:00.000Z',
@@ -140,6 +154,7 @@ export default [
     twitter: 'https://twitter.com/Metaverse_conf'
   },
   {
+    id: 15,
     name: 'European Blockchain Convention',
     startDate: '2023-02-15T00:00:00.000Z',
     endDate: '2023-02-17T00:00:00.000Z',
@@ -150,6 +165,7 @@ export default [
     twitter: 'https://twitter.com/EBlockchainCon'
   },
   {
+    id: 16,
     name: 'Blockchain Fest',
     startDate: '2023-02-16T00:00:00.000Z',
     endDate: '2023-02-17T00:00:00.000Z',
@@ -160,6 +176,7 @@ export default [
     twitter: 'https://twitter.com/blockchain_fest'
   },
   {
+    id: 17,
     name: 'ETH Denver',
     startDate: '2023-02-24T00:00:00.000Z',
     endDate: '2023-03-05T00:00:00.000Z',
@@ -170,6 +187,7 @@ export default [
     twitter: 'https://twitter.com/EthereumDenver'
   },
   {
+    id: 18,
     name: 'NFT Paris',
     startDate: '2023-02-24T00:00:00.000Z',
     endDate: '2023-02-25T00:00:00.000Z',
@@ -180,6 +198,7 @@ export default [
     twitter: 'https://twitter.com/nft_paris'
   },
   {
+    id: 19,
     name: 'Buidlweek',
     startDate: '2023-02-24T00:00:00.000Z',
     endDate: '2023-03-01T00:00:00.000Z',
@@ -190,6 +209,7 @@ export default [
     twitter: 'https://twitter.com/EthereumDenver'
   },
   {
+    id: 20,
     name: 'Interop Summit',
     startDate: '2023-02-27T00:00:00.000Z',
     endDate: '2023-02-28T00:00:00.000Z',
@@ -200,6 +220,7 @@ export default [
     twitter: 'https://twitter.com/Interop_Summit'
   },
   {
+    id: 21,
     name: 'Blockchain Economy Summit',
     startDate: '2023-02-27T00:00:00.000Z',
     endDate: '2023-02-28T00:00:00.000Z',
@@ -210,6 +231,7 @@ export default [
     twitter: 'https://twitter.com/BEconomy_HQ'
   },
   {
+    id: 22,
     name: 'Blockchain Life',
     startDate: '2023-02-27T00:00:00.000Z',
     endDate: '2023-02-28T00:00:00.000Z',
@@ -220,6 +242,7 @@ export default [
     twitter: 'https://twitter.com/BlLife_Forum'
   },
   {
+    id: 23,
     name: 'Expoverse',
     startDate: '2023-02-27T00:00:00.000Z',
     endDate: '2023-03-05T00:00:00.000Z',
@@ -230,6 +253,7 @@ export default [
     twitter: 'https://twitter.com/goexpoverse'
   },
   {
+    id: 25,
     name: 'We Are Millions',
     startDate: '2023-03-01T00:00:00.000Z',
     endDate: '2023-03-21T00:00:00.000Z',
@@ -240,6 +264,7 @@ export default [
     twitter: 'https://twitter.com/fairdatasociety'
   },
   {
+    id: 26,
     name: 'SchellingPoint',
     startDate: '2023-03-02T00:00:00.000Z',
     endDate: '2023-03-02T00:00:00.000Z',
@@ -250,6 +275,7 @@ export default [
     twitter: 'https://twitter.com/schellingpoint_'
   },
   {
+    id: 27,
     name: 'Blockchain Economy Summit',
     startDate: '2023-03-08T00:00:00.000Z',
     endDate: '2023-03-09T00:00:00.000Z',
@@ -260,6 +286,7 @@ export default [
     twitter: 'https://twitter.com/BEconomy_HQ'
   },
   {
+    id: 28,
     name: 'Crypto Expo Dubai',
     startDate: '2023-03-08T00:00:00.000Z',
     endDate: '2023-03-09T00:00:00.000Z',
@@ -270,9 +297,10 @@ export default [
     twitter: 'https://twitter.com/TheCryptoExpo'
   },
   {
+    id: 29,
     name: 'Scaling Ethereum',
     startDate: '2023-03-10T00:00:00.000Z',
-    endDate: '2023-03-28T23:00:00.000Z',
+    endDate: '2023-03-29T00:00:00.000Z',
     city: 'Online',
     country: 'Online',
     region: 'Online',
@@ -280,6 +308,7 @@ export default [
     twitter: 'https://twitter.com/ETHGlobal'
   },
   {
+    id: 30,
     name: 'AIBC EURASIA',
     startDate: '2023-03-13T00:00:00.000Z',
     endDate: '2023-03-16T00:00:00.000Z',
@@ -290,6 +319,7 @@ export default [
     twitter: 'https://twitter.com/aibcsummit'
   },
   {
+    id: 31,
     name: 'ETHDubai',
     startDate: '2023-03-14T00:00:00.000Z',
     endDate: '2023-03-16T00:00:00.000Z',
@@ -300,6 +330,7 @@ export default [
     twitter: 'https://twitter.com/Web3Dubai'
   },
   {
+    id: 32,
     name: 'Solana Hacker House | HCMC',
     startDate: '2023-03-15T00:00:00.000Z',
     endDate: '2023-03-19T00:00:00.000Z',
@@ -310,6 +341,7 @@ export default [
     twitter: 'https://twitter.com/hackerhouses'
   },
   {
+    id: 33,
     name: 'Blockchain Africa Conference',
     startDate: '2023-03-16T00:00:00.000Z',
     endDate: '2023-03-17T00:00:00.000Z',
@@ -320,6 +352,7 @@ export default [
     twitter: 'https://twitter.com/BlockchainZA'
   },
   {
+    id: 34,
     name: 'Virtually Paris',
     startDate: '2023-03-16T00:00:00.000Z',
     endDate: '2023-03-17T00:00:00.000Z',
@@ -330,6 +363,7 @@ export default [
     twitter: 'https://twitter.com/Web3Virtuality'
   },
   {
+    id: 35,
     name: 'Crypto Expo Europe',
     startDate: '2023-03-19T00:00:00.000Z',
     endDate: '2023-03-21T00:00:00.000Z',
@@ -340,6 +374,7 @@ export default [
     twitter: 'https://twitter.com/cryptoexpoeu'
   },
   {
+    id: 36,
     name: 'NFT LA',
     startDate: '2023-03-20T00:00:00.000Z',
     endDate: '2023-03-23T00:00:00.000Z',
@@ -350,6 +385,7 @@ export default [
     twitter: 'https://twitter.com/nftlalive'
   },
   {
+    id: 37,
     name: 'Paris Blockchain Week Summit',
     startDate: '2023-03-20T00:00:00.000Z',
     endDate: '2023-03-24T00:00:00.000Z',
@@ -360,6 +396,7 @@ export default [
     twitter: 'https://twitter.com/ParisBlockWeek'
   },
   {
+    id: 38,
     name: 'Internation Women of Blockchain',
     startDate: '2023-03-22T00:00:00.000Z',
     endDate: '2023-03-24T00:00:00.000Z',
@@ -370,6 +407,7 @@ export default [
     twitter: 'https://twitter.com/IWBevent'
   },
   {
+    id: 39,
     name: 'Art Basel',
     startDate: '2023-03-23T00:00:00.000Z',
     endDate: '2023-03-25T00:00:00.000Z',
@@ -380,9 +418,10 @@ export default [
     twitter: 'https://twitter.com/ArtBasel'
   },
   {
+    id: 40,
     name: 'Ethereum Brasil',
-    startDate: '2023-03-27T23:00:00.000Z',
-    endDate: '2023-03-29T23:00:00.000Z',
+    startDate: '2023-03-28T00:00:00.000Z',
+    endDate: '2023-03-30T00:00:00.000Z',
     city: 'Rio de Jainero',
     country: 'Brasil',
     region: 'South America',
@@ -390,9 +429,10 @@ export default [
     twitter: 'https://twitter.com/Ethereum_Brasil'
   },
   {
+    id: 41,
     name: 'WOW Summit',
-    startDate: '2023-03-28T23:00:00.000Z',
-    endDate: '2023-03-29T23:00:00.000Z',
+    startDate: '2023-03-29T00:00:00.000Z',
+    endDate: '2023-03-30T00:00:00.000Z',
     city: 'Chek Lap Kok',
     country: 'Hong Kong',
     region: 'East Asia',
@@ -400,9 +440,10 @@ export default [
     twitter: 'https://twitter.com/wowsummitworld'
   },
   {
+    id: 42,
     name: 'American Metaverse Awards',
-    startDate: '2023-03-28T23:00:00.000Z',
-    endDate: '2023-03-29T23:00:00.000Z',
+    startDate: '2023-03-29T00:00:00.000Z',
+    endDate: '2023-03-30T00:00:00.000Z',
     city: 'Miami',
     country: 'United States',
     region: 'North America',
@@ -410,9 +451,10 @@ export default [
     twitter: 'https://twitter.com/MetaWeb3Awards'
   },
   {
+    id: 43,
     name: 'Miami NFT Week',
-    startDate: '2023-03-30T23:00:00.000Z',
-    endDate: '2023-04-01T23:00:00.000Z',
+    startDate: '2023-03-31T00:00:00.000Z',
+    endDate: '2023-04-02T00:00:00.000Z',
     city: 'Miami',
     country: 'United States',
     region: 'North America',
@@ -420,9 +462,10 @@ export default [
     twitter: 'https://twitter.com/MiamiNFTweek'
   },
   {
+    id: 45,
     name: 'EDCON',
-    startDate: '2023-04-02T23:00:00.000Z',
-    endDate: '2023-04-05T23:00:00.000Z',
+    startDate: '2023-04-03T00:00:00.000Z',
+    endDate: '2023-04-06T00:00:00.000Z',
     city: 'Vienna',
     country: 'Austria',
     region: 'Europe',
@@ -430,9 +473,10 @@ export default [
     twitter: 'https://twitter.com/EDCON2023'
   },
   {
+    id: 46,
     name: 'Teamz Web 3 Summit',
-    startDate: '2023-04-05T23:00:00.000Z',
-    endDate: '2023-04-06T23:00:00.000Z',
+    startDate: '2023-04-06T00:00:00.000Z',
+    endDate: '2023-04-07T00:00:00.000Z',
     city: 'Tokyo',
     country: 'Japan',
     region: 'East Asia',
@@ -440,9 +484,10 @@ export default [
     twitter: 'https://twitter.com/teamz_inc'
   },
   {
+    id: 47,
     name: 'NFT NYC',
-    startDate: '2023-04-11T23:00:00.000Z',
-    endDate: '2023-04-13T23:00:00.000Z',
+    startDate: '2023-04-12T00:00:00.000Z',
+    endDate: '2023-04-14T00:00:00.000Z',
     city: 'New York City',
     country: 'United States',
     region: 'North America',
@@ -450,9 +495,10 @@ export default [
     twitter: 'https://twitter.com/NFT_NYC'
   },
   {
+    id: 48,
     name: 'DAO Tokyo',
-    startDate: '2023-04-12T23:00:00.000Z',
-    endDate: '2023-04-12T23:00:00.000Z',
+    startDate: '2023-04-13T00:00:00.000Z',
+    endDate: '2023-04-13T00:00:00.000Z',
     city: 'Tokyo',
     country: 'Japan',
     region: 'East Asia',
@@ -460,9 +506,10 @@ export default [
     twitter: 'https://twitter.com/DAO_TOKYO_XYZ'
   },
   {
+    id: 49,
     name: 'ETHGlobal Tokyo Hackathon',
-    startDate: '2023-04-13T23:00:00.000Z',
-    endDate: '2023-04-15T23:00:00.000Z',
+    startDate: '2023-04-14T00:00:00.000Z',
+    endDate: '2023-04-16T00:00:00.000Z',
     city: 'Tokyo',
     country: 'Japan',
     region: 'East Asia',
@@ -470,9 +517,10 @@ export default [
     twitter: 'https://twitter.com/ethglobal'
   },
   {
+    id: 50,
     name: 'BlockchainWeek ZA',
-    startDate: '2023-04-13T23:00:00.000Z',
-    endDate: '2023-04-20T23:00:00.000Z',
+    startDate: '2023-04-14T00:00:00.000Z',
+    endDate: '2023-04-21T00:00:00.000Z',
     city: 'Cape Town',
     country: 'South Africa',
     region: 'Africa',
@@ -480,9 +528,10 @@ export default [
     twitter: 'https://twitter.com/EthCapeTown'
   },
   {
+    id: 51,
     name: 'Sol.Ladies Build Hacker House',
-    startDate: '2023-04-19T23:00:00.000Z',
-    endDate: '2023-04-23T23:00:00.000Z',
+    startDate: '2023-04-20T00:00:00.000Z',
+    endDate: '2023-04-24T00:00:00.000Z',
     city: 'Austin',
     country: 'United States',
     region: 'North America',
@@ -490,9 +539,10 @@ export default [
     twitter: 'https://twitter.com/hackerhouses'
   },
   {
+    id: 52,
     name: 'Consensus2023',
-    startDate: '2023-04-25T23:00:00.000Z',
-    endDate: '2023-04-27T23:00:00.000Z',
+    startDate: '2023-04-26T00:00:00.000Z',
+    endDate: '2023-04-28T00:00:00.000Z',
     city: 'Austin',
     country: 'United States',
     region: 'North America',
@@ -500,9 +550,10 @@ export default [
     twitter: 'https://twitter.com/coindesk'
   },
   {
+    id: 53,
     name: 'ETH #PRIVACY',
-    startDate: '2023-04-26T23:00:00.000Z',
-    endDate: '2023-04-29T23:00:00.000Z',
+    startDate: '2023-04-27T00:00:00.000Z',
+    endDate: '2023-04-30T00:00:00.000Z',
     city: 'Istanbul',
     country: 'Turkey',
     region: 'Middle East / Europe',
@@ -510,9 +561,10 @@ export default [
     twitter: 'https://twitter.com/LeadingPrivacy'
   },
   {
+    id: 55,
     name: 'Avalanche Summit II',
-    startDate: '2023-05-02T23:00:00.000Z',
-    endDate: '2023-05-04T23:00:00.000Z',
+    startDate: '2023-05-03T00:00:00.000Z',
+    endDate: '2023-05-05T00:00:00.000Z',
     city: 'Barcelona',
     country: 'Spain',
     region: 'Europe',
@@ -520,9 +572,10 @@ export default [
     twitter: 'https://twitter.com/avalancheavax'
   },
   {
+    id: 56,
     name: 'ETHMalaysia',
-    startDate: '2023-05-04T23:00:00.000Z',
-    endDate: '2023-05-06T23:00:00.000Z',
+    startDate: '2023-05-05T00:00:00.000Z',
+    endDate: '2023-05-07T00:00:00.000Z',
     city: 'Kuala Lumpur',
     country: 'Malaysia',
     region: 'Southeast Asia',
@@ -530,9 +583,10 @@ export default [
     twitter: 'https://twitter.com/ETHMalaysia_'
   },
   {
+    id: 57,
     name: 'Solana Hacker House | Taipei',
-    startDate: '2023-05-09T23:00:00.000Z',
-    endDate: '2023-05-13T23:00:00.000Z',
+    startDate: '2023-05-10T00:00:00.000Z',
+    endDate: '2023-05-14T00:00:00.000Z',
     city: 'Taipei City',
     country: 'Taiwan',
     region: 'East Asia',
@@ -540,9 +594,10 @@ export default [
     twitter: 'https://twitter.com/hackerhouses'
   },
   {
+    id: 58,
     name: 'ETH Taipei',
-    startDate: '2023-05-09T23:00:00.000Z',
-    endDate: '2023-05-13T23:00:00.000Z',
+    startDate: '2023-05-10T00:00:00.000Z',
+    endDate: '2023-05-14T00:00:00.000Z',
     city: 'Taipei City',
     country: 'Taiwan',
     region: 'East Asia',
@@ -550,9 +605,10 @@ export default [
     twitter: 'https://twitter.com/eth_taipei'
   },
   {
+    id: 59,
     name: 'Dcentral Vietneam',
-    startDate: '2023-05-10T23:00:00.000Z',
-    endDate: '2023-05-11T23:00:00.000Z',
+    startDate: '2023-05-11T00:00:00.000Z',
+    endDate: '2023-05-12T00:00:00.000Z',
     city: 'Ho Chi Minh',
     country: 'Vietnam',
     region: 'Southeast Asia',
@@ -560,9 +616,10 @@ export default [
     twitter: 'https://twitter.com/DcentralCon'
   },
   {
+    id: 60,
     name: 'Blockchain Expo',
-    startDate: '2023-05-16T23:00:00.000Z',
-    endDate: '2023-05-17T23:00:00.000Z',
+    startDate: '2023-05-17T00:00:00.000Z',
+    endDate: '2023-05-18T00:00:00.000Z',
     city: 'California',
     country: 'United States',
     region: 'North America',
@@ -570,9 +627,10 @@ export default [
     twitter: 'https://twitter.com/Blockchain_Expo'
   },
   {
+    id: 61,
     name: 'Bitcoin 2023',
-    startDate: '2023-05-17T23:00:00.000Z',
-    endDate: '2023-05-19T23:00:00.000Z',
+    startDate: '2023-05-18T00:00:00.000Z',
+    endDate: '2023-05-20T00:00:00.000Z',
     city: 'Miami',
     country: 'United States',
     region: 'North America',
@@ -580,9 +638,10 @@ export default [
     twitter: 'https://twitter.com/TheBitcoinConf'
   },
   {
+    id: 62,
     name: 'ETHGlobal Istanbul Hackathon',
-    startDate: '2023-05-25T23:00:00.000Z',
-    endDate: '2023-05-27T23:00:00.000Z',
+    startDate: '2023-05-26T00:00:00.000Z',
+    endDate: '2023-05-28T00:00:00.000Z',
     city: 'Istanbul',
     country: 'Turkey',
     region: 'Middle East / Europe',
@@ -590,9 +649,10 @@ export default [
     twitter: 'https://twitter.com/ethglobal'
   },
   {
+    id: 63,
     name: 'London Blockchain Conference',
-    startDate: '2023-05-30T23:00:00.000Z',
-    endDate: '2023-06-01T23:00:00.000Z',
+    startDate: '2023-05-31T00:00:00.000Z',
+    endDate: '2023-06-02T00:00:00.000Z',
     city: 'London',
     country: 'United Kingdom',
     region: 'Europe',
@@ -600,9 +660,10 @@ export default [
     twitter: 'https://twitter.com/LDN_Blockchain'
   },
   {
+    id: 64,
     name: 'Render ATL',
-    startDate: '2023-05-30T23:00:00.000Z',
-    endDate: '2023-06-01T23:00:00.000Z',
+    startDate: '2023-05-31T00:00:00.000Z',
+    endDate: '2023-06-02T00:00:00.000Z',
     city: 'Atlanta',
     country: 'United States',
     region: 'North America',
@@ -610,9 +671,10 @@ export default [
     twitter: 'https://twitter.com/renderatl'
   },
   {
+    id: 66,
     name: 'ETHSeoul',
-    startDate: '2023-06-01T23:00:00.000Z',
-    endDate: '2023-06-03T23:00:00.000Z',
+    startDate: '2023-06-02T00:00:00.000Z',
+    endDate: '2023-06-04T00:00:00.000Z',
     city: 'Seoul',
     country: 'South Korea',
     region: 'East Asia',
@@ -620,9 +682,10 @@ export default [
     twitter: 'https://twitter.com/eth_seoul_'
   },
   {
+    id: 67,
     name: 'Belgrade Blockchain Week',
-    startDate: '2023-06-02T23:00:00.000Z',
-    endDate: '2023-06-03T23:00:00.000Z',
+    startDate: '2023-06-03T00:00:00.000Z',
+    endDate: '2023-06-04T00:00:00.000Z',
     city: 'Belgrade',
     country: 'Serbia',
     region: 'Europe',
@@ -630,9 +693,10 @@ export default [
     twitter: 'https://twitter.com/bgdblockchain'
   },
   {
+    id: 68,
     name: 'UTXO',
-    startDate: '2023-06-03T23:00:00.000Z',
-    endDate: '2023-06-04T23:00:00.000Z',
+    startDate: '2023-06-04T00:00:00.000Z',
+    endDate: '2023-06-05T00:00:00.000Z',
     city: 'Prague',
     country: 'Czech Republic',
     region: 'Europe',
@@ -640,9 +704,10 @@ export default [
     twitter: 'https://twitter.com/utxoprague'
   },
   {
+    id: 69,
     name: 'Brussels Blockchain Week',
-    startDate: '2023-06-04T23:00:00.000Z',
-    endDate: '2023-06-10T23:00:00.000Z',
+    startDate: '2023-06-05T00:00:00.000Z',
+    endDate: '2023-06-11T00:00:00.000Z',
     city: 'Brussels',
     country: 'Belgium',
     region: 'Europe',
@@ -650,9 +715,10 @@ export default [
     twitter: 'https://mobile.twitter.com/brusselsblockc1'
   },
   {
+    id: 70,
     name: 'Solana Hacker House | New York',
-    startDate: '2023-06-06T23:00:00.000Z',
-    endDate: '2023-06-10T23:00:00.000Z',
+    startDate: '2023-06-07T00:00:00.000Z',
+    endDate: '2023-06-11T00:00:00.000Z',
     city: 'New York',
     country: 'United States',
     region: 'North America',
@@ -660,9 +726,10 @@ export default [
     twitter: 'https://twitter.com/hackerhouses'
   },
   {
+    id: 71,
     name: 'Non Fungible Conference',
-    startDate: '2023-06-06T23:00:00.000Z',
-    endDate: '2023-06-07T23:00:00.000Z',
+    startDate: '2023-06-07T00:00:00.000Z',
+    endDate: '2023-06-08T00:00:00.000Z',
     city: 'Lisbon',
     country: 'Portugal',
     region: 'Europe',
@@ -670,9 +737,10 @@ export default [
     twitter: 'https://twitter.com/NFCsummit'
   },
   {
+    id: 72,
     name: 'Prague Blockchain Week',
-    startDate: '2023-06-09T23:00:00.000Z',
-    endDate: '2023-06-11T23:00:00.000Z',
+    startDate: '2023-06-10T00:00:00.000Z',
+    endDate: '2023-06-12T00:00:00.000Z',
     city: 'Prague',
     country: 'Czech Republic',
     region: 'Europe',
@@ -680,9 +748,10 @@ export default [
     twitter: 'https://twitter.com/ethprague'
   },
   {
+    id: 73,
     name: 'Metaverse Summit',
-    startDate: '2023-06-11T23:00:00.000Z',
-    endDate: '2023-06-12T23:00:00.000Z',
+    startDate: '2023-06-12T00:00:00.000Z',
+    endDate: '2023-06-13T00:00:00.000Z',
     city: 'Paris',
     country: 'France',
     region: 'Europe',
@@ -690,9 +759,10 @@ export default [
     twitter: 'https://twitter.com/Metaverse_conf'
   },
   {
+    id: 74,
     name: 'ETHGlobal Toronto Hackathon',
-    startDate: '2023-06-22T23:00:00.000Z',
-    endDate: '2023-06-24T23:00:00.000Z',
+    startDate: '2023-06-23T00:00:00.000Z',
+    endDate: '2023-06-25T00:00:00.000Z',
     city: 'Toronto',
     country: 'Canada',
     region: 'North America',
@@ -700,9 +770,10 @@ export default [
     twitter: 'https://twitter.com/ETH_Toronto'
   },
   {
+    id: 75,
     name: 'Solana Hacker House | Tel Aviv',
-    startDate: '2023-06-24T23:00:00.000Z',
-    endDate: '2023-06-28T23:00:00.000Z',
+    startDate: '2023-06-25T00:00:00.000Z',
+    endDate: '2023-06-29T00:00:00.000Z',
     city: 'Tel Aviv-Yafo',
     country: 'Israel',
     region: 'Middle East',
@@ -710,9 +781,10 @@ export default [
     twitter: 'https://twitter.com/hackerhouses'
   },
   {
+    id: 76,
     name: 'Blockchance 2023',
-    startDate: '2023-06-27T23:00:00.000Z',
-    endDate: '2023-06-29T23:00:00.000Z',
+    startDate: '2023-06-28T00:00:00.000Z',
+    endDate: '2023-06-30T00:00:00.000Z',
     city: 'Hamburg',
     country: 'Germany',
     region: 'Europe',
@@ -720,9 +792,10 @@ export default [
     twitter: 'https://twitter.com/blockchance_'
   },
   {
+    id: 78,
     name: 'Block3000',
-    startDate: '2023-07-05T23:00:00.000Z',
-    endDate: '2023-07-06T23:00:00.000Z',
+    startDate: '2023-07-06T00:00:00.000Z',
+    endDate: '2023-07-07T00:00:00.000Z',
     city: 'Lisbon',
     country: 'Portugal',
     region: 'Europe',
@@ -730,9 +803,10 @@ export default [
     twitter: 'https://twitter.com/Blockchain_3000'
   },
   {
+    id: 79,
     name: 'ETHBarcelona',
-    startDate: '2023-07-05T23:00:00.000Z',
-    endDate: '2023-07-07T23:00:00.000Z',
+    startDate: '2023-07-06T00:00:00.000Z',
+    endDate: '2023-07-08T00:00:00.000Z',
     city: 'Barcelona',
     country: 'Spain',
     region: 'Europe',
@@ -740,9 +814,10 @@ export default [
     twitter: 'https://twitter.com/eth_barcelona'
   },
   {
+    id: 80,
     name: 'NFT Show Europe',
-    startDate: '2023-07-13T23:00:00.000Z',
-    endDate: '2023-07-14T23:00:00.000Z',
+    startDate: '2023-07-14T00:00:00.000Z',
+    endDate: '2023-07-15T00:00:00.000Z',
     city: 'Valencia',
     country: 'Spain',
     region: 'Europe',
@@ -750,9 +825,10 @@ export default [
     twitter: 'https://twitter.com/nftshoweurope'
   },
   {
+    id: 81,
     name: 'ETHCC Paris',
-    startDate: '2023-07-16T23:00:00.000Z',
-    endDate: '2023-07-22T23:00:00.000Z',
+    startDate: '2023-07-17T00:00:00.000Z',
+    endDate: '2023-07-23T00:00:00.000Z',
     city: 'Paris',
     country: 'France',
     region: 'Europe',
@@ -760,9 +836,10 @@ export default [
     twitter: 'https://twitter.com/ethcc'
   },
   {
+    id: 82,
     name: 'AIBC ASIA',
-    startDate: '2023-07-18T23:00:00.000Z',
-    endDate: '2023-07-21T23:00:00.000Z',
+    startDate: '2023-07-19T00:00:00.000Z',
+    endDate: '2023-07-22T00:00:00.000Z',
     city: 'Manila',
     country: 'Phillipines',
     region: 'Southeast Asia',
@@ -770,9 +847,10 @@ export default [
     twitter: 'https://twitter.com/aibcsummit'
   },
   {
+    id: 83,
     name: 'ETHGlobal Paris Hackathon',
-    startDate: '2023-07-20T23:00:00.000Z',
-    endDate: '2023-07-22T23:00:00.000Z',
+    startDate: '2023-07-21T00:00:00.000Z',
+    endDate: '2023-07-23T00:00:00.000Z',
     city: 'Paris',
     country: 'France',
     region: 'Europe',
@@ -780,9 +858,10 @@ export default [
     twitter: 'https://twitter.com/ethglobal'
   },
   {
+    id: 85,
     name: 'Web3 Lagos Conference',
-    startDate: '2023-08-16T23:00:00.000Z',
-    endDate: '2023-08-18T23:00:00.000Z',
+    startDate: '2023-08-17T00:00:00.000Z',
+    endDate: '2023-08-19T00:00:00.000Z',
     city: 'Lagos',
     country: 'Nigeria',
     region: 'Africa',
@@ -790,9 +869,10 @@ export default [
     twitter: 'https://twitter.com/web3bridge'
   },
   {
+    id: 86,
     name: 'Stanford Blockchain Conference',
-    startDate: '2023-08-27T23:00:00.000Z',
-    endDate: '2023-08-29T23:00:00.000Z',
+    startDate: '2023-08-28T00:00:00.000Z',
+    endDate: '2023-08-30T00:00:00.000Z',
     city: 'California',
     country: 'United States',
     region: 'North America',
@@ -800,9 +880,10 @@ export default [
     twitter: 'https://twitter.com/CBRStanford'
   },
   {
+    id: 87,
     name: 'Solana Hacker House | Berlin',
-    startDate: '2023-08-29T23:00:00.000Z',
-    endDate: '2023-09-02T23:00:00.000Z',
+    startDate: '2023-08-30T00:00:00.000Z',
+    endDate: '2023-09-03T00:00:00.000Z',
     city: 'Berlin',
     country: 'Germany',
     region: 'Europe',
@@ -810,9 +891,10 @@ export default [
     twitter: 'https://twitter.com/hackerhouses'
   },
   {
+    id: 89,
     name: 'ETHWarsaw',
-    startDate: '2023-08-31T23:00:00.000Z',
-    endDate: '2023-09-03T23:00:00.000Z',
+    startDate: '2023-09-01T00:00:00.000Z',
+    endDate: '2023-09-04T00:00:00.000Z',
     city: 'Warsaw',
     country: 'Poland',
     region: 'Europe',
@@ -820,9 +902,10 @@ export default [
     twitter: 'https://twitter.com/ETHWarsaw/'
   },
   {
+    id: 90,
     name: 'DappCon',
-    startDate: '2023-09-10T23:00:00.000Z',
-    endDate: '2023-09-12T23:00:00.000Z',
+    startDate: '2023-09-11T00:00:00.000Z',
+    endDate: '2023-09-13T00:00:00.000Z',
     city: 'Berlin',
     country: 'Germany',
     region: 'Europe',
@@ -830,9 +913,10 @@ export default [
     twitter: 'https://twitter.com/dappcon_berlin'
   },
   {
+    id: 91,
     name: 'Fintech.li Conference',
-    startDate: '2023-09-10T23:00:00.000Z',
-    endDate: '2023-09-11T23:00:00.000Z',
+    startDate: '2023-09-11T00:00:00.000Z',
+    endDate: '2023-09-12T00:00:00.000Z',
     city: 'Schaan',
     country: 'Liechtenstein',
     region: 'Europe',
@@ -840,9 +924,10 @@ export default [
     twitter: 'https://twitter.com/fintech_li'
   },
   {
+    id: 92,
     name: 'Permissionless',
-    startDate: '2023-09-10T23:00:00.000Z',
-    endDate: '2023-09-12T23:00:00.000Z',
+    startDate: '2023-09-11T00:00:00.000Z',
+    endDate: '2023-09-13T00:00:00.000Z',
     city: 'Austin',
     country: 'United States',
     region: 'North America',
@@ -850,9 +935,10 @@ export default [
     twitter: 'https://twitter.com/Permissionless'
   },
   {
+    id: 93,
     name: 'DappCon',
-    startDate: '2023-09-10T23:00:00.000Z',
-    endDate: '2023-09-12T23:00:00.000Z',
+    startDate: '2023-09-11T00:00:00.000Z',
+    endDate: '2023-09-13T00:00:00.000Z',
     city: 'Berlin',
     country: 'Germany',
     region: 'Europe',
@@ -860,9 +946,10 @@ export default [
     twitter: 'https://twitter.com/dappcon_berlin'
   },
   {
+    id: 94,
     name: 'TOKEN2049 Singapore',
-    startDate: '2023-09-12T23:00:00.000Z',
-    endDate: '2023-09-13T23:00:00.000Z',
+    startDate: '2023-09-13T00:00:00.000Z',
+    endDate: '2023-09-14T00:00:00.000Z',
     city: 'Singapore',
     country: 'Singapore',
     region: 'Southeast Asia',
@@ -870,9 +957,10 @@ export default [
     twitter: 'https://twitter.com/token2049'
   },
   {
+    id: 95,
     name: 'Solana Hacker House | Bengaluru',
-    startDate: '2023-09-13T23:00:00.000Z',
-    endDate: '2023-09-16T23:00:00.000Z',
+    startDate: '2023-09-14T00:00:00.000Z',
+    endDate: '2023-09-17T00:00:00.000Z',
     city: 'Bengaluru',
     country: 'India',
     region: 'Southeast Asia',
@@ -880,9 +968,10 @@ export default [
     twitter: 'https://twitter.com/hackerhouses'
   },
   {
+    id: 96,
     name: 'ETHBerlin',
-    startDate: '2023-09-15T23:00:00.000Z',
-    endDate: '2023-09-17T23:00:00.000Z',
+    startDate: '2023-09-16T00:00:00.000Z',
+    endDate: '2023-09-18T00:00:00.000Z',
     city: 'Berlin',
     country: 'Germany',
     region: 'Europe',
@@ -890,9 +979,10 @@ export default [
     twitter: 'https://twitter.com/ETHBerlin'
   },
   {
+    id: 97,
     name: 'ETHSafari',
-    startDate: '2023-09-17T23:00:00.000Z',
-    endDate: '2023-09-23T23:00:00.000Z',
+    startDate: '2023-09-18T00:00:00.000Z',
+    endDate: '2023-09-24T00:00:00.000Z',
     city: 'Nairobi / Kilifi',
     country: 'Kenya',
     region: 'Africa',
@@ -900,9 +990,10 @@ export default [
     twitter: 'https://twitter.com/EthSafari'
   },
   {
+    id: 98,
     name: 'W3.Vision',
-    startDate: '2023-09-19T23:00:00.000Z',
-    endDate: '2023-09-20T23:00:00.000Z',
+    startDate: '2023-09-20T00:00:00.000Z',
+    endDate: '2023-09-21T00:00:00.000Z',
     city: 'Cologne',
     country: 'Germany',
     region: 'Europe',
@@ -910,9 +1001,10 @@ export default [
     twitter: 'https://twitter.com/dmexco'
   },
   {
+    id: 99,
     name: 'ETHGlobal New York',
-    startDate: '2023-09-21T23:00:00.000Z',
-    endDate: '2023-09-23T23:00:00.000Z',
+    startDate: '2023-09-22T00:00:00.000Z',
+    endDate: '2023-09-24T00:00:00.000Z',
     city: 'New York City',
     country: 'United States',
     region: 'North America',
@@ -920,8 +1012,9 @@ export default [
     twitter: 'https://twitter.com/ETHNewYork'
   },
   {
+    id: 101,
     name: 'ETHOnline',
-    startDate: '2023-10-05T23:00:00.000Z',
+    startDate: '2023-10-06T00:00:00.000Z',
     endDate: '2023-10-25T00:00:00.000Z',
     city: 'Online',
     country: 'Online',

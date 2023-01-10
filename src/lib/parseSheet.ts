@@ -16,11 +16,12 @@ function dateFromStr(str: string) {
   return new Date(`${y}-${padDateStr(m + 1)}-${padDateStr(d)}`);
 }
 
-function parseRow(data: Record<string, any>): EventType | null {
+function parseRow(data: Record<string, any>, id: number): EventType | null {
   const cols = data.c;
 
   try {
     return {
+      id,
       name: cols[0].v,
       startDate: dateFromStr(cols[1].v),
       endDate: dateFromStr(cols[2].v),
@@ -40,7 +41,7 @@ export function parseSheet(data: Record<string, any>): EventType[] {
 
   const events = rows
     .slice(1)
-    .map((item: Record<string, any>) => parseRow(item))
+    .map((item: Record<string, any>, idx: number) => parseRow(item, idx))
     .filter(Boolean);
 
   return events;
