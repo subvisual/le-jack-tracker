@@ -4,7 +4,7 @@
   import url from '$lib/util/url';
 
   export let month: Month;
-  const height = 2.3;
+  const height = 1.9;
 
   let monthName = month.current.toLocaleDateString('default', {
     month: 'short'
@@ -20,12 +20,14 @@
 <section class="month" style="--track-height: {height}rem">
   {#each month.days as day}
     {@const isStartOfMonth = day.current.getDate() === 1}
-    {@const isStartOfWeek = (day.current.getDate() - 1) % 7 === 0}
+    {@const isStartOfWeek = day.current.getDay() === 0}
+    {@const offset = isStartOfMonth ? day.current.getDay() + 1 : 0}
 
     <div
       class="day"
       class:clip={day.events.length > 1}
-      style="min-height: {(highestTrackValue(day.events) + 2) * height}rem"
+      style="min-height: {(highestTrackValue(day.events) + 2) *
+        height}rem; grid-column-start: {offset}"
     >
       <div class="date-line">
         <p class="day-digit">
@@ -48,6 +50,9 @@
             style="background: {evt.color}; top: {(evt.line + 1) * height}rem"
             on:mouseenter={() => {
               $eventsCalendar.active = evt.id;
+            }}
+            on:mouseleave={() => {
+              $eventsCalendar.active = -1;
             }}
           >
             <div
@@ -79,11 +84,10 @@
     gap: 2rem 0;
     margin-bottom: 2rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid lightcoral;
   }
   .day {
     position: relative;
-    height: 100px;
+    height: 100px;    
   }
   .date-line {
     display: flex;
@@ -91,7 +95,6 @@
     margin-bottom: 1rem;
   }
   .day-digit {
-    color: grey;
     margin-right: 0.5rem;
   }
   .week {
@@ -108,6 +111,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-decoration: none;
+    border: 1px solid transparent;
   }
   .event-name {
     display: block;
@@ -118,8 +122,8 @@
   }
   .activeEvent {
     filter: saturate(2);
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
+    border-top: 1px solid #242424;
+    border-bottom: 1px solid #242424;
   }
   .activeEvent.lastDay {
     border-right: 1px solid #000;
