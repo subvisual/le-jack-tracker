@@ -4,7 +4,7 @@
   import url from '$lib/util/url';
 
   export let month: Month;
-  const height = 1.9;
+  const height = 1.5;
 
   let monthName = month.current.toLocaleDateString('default', {
     month: 'short'
@@ -26,7 +26,7 @@
     <div
       class="day"
       class:clip={day.events.length > 1}
-      style="min-height: {(highestTrackValue(day.events) + 2) *
+      style="height: {(highestTrackValue(day.events) + 2) *
         height}rem; grid-column-start: {offset}"
     >
       <div class="date-line">
@@ -75,19 +75,20 @@
 <style>
   .name {
     display: block;
-    margin-bottom: 0.5em;
-    color: tomato;
+    color: #242424;
+    margin-bottom: 0.25rem;
   }
   .month {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 2rem 0;
+    gap: 1.25rem 0;
     margin-bottom: 2rem;
     padding-bottom: 1rem;
   }
   .day {
     position: relative;
-    height: 100px;    
+    min-height: 100px;
+    border-bottom: 1px solid #eee;
   }
   .date-line {
     display: flex;
@@ -104,10 +105,10 @@
   .event-line {
     position: absolute;
     left: 0;
-    width: 100%;
     display: block;
+    width: 100%;
     height: var(--track-height);
-    padding: 0.25rem 0.5rem;
+    padding-left: 0.25rem;
     overflow: hidden;
     white-space: nowrap;
     text-decoration: none;
