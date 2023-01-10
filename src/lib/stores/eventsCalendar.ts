@@ -59,11 +59,16 @@ function eventsCalendar() {
 
   function processEvents(events: EventType[]) {
     const colors = [
-      'Lavender',
-      'PaleGoldenrod',
-      'PaleGreen',
-      'LightCoral',
-      'LightCyan'
+      '#e4e4e7',
+      '#fecaca',
+      '#fed7aa',
+      '#fef08a',
+      '#d9f99d',
+      '#a7f3d0',
+      '#bae6fd',
+      '#c7d2fe',
+      '#e9d5ff',
+      '#fbcfe8'
     ];
     let index = 0;
 
