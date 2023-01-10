@@ -4,6 +4,7 @@
   import type { PageData } from './$types';
 
   export let data: PageData;
+  console.log(data.events);
   eventsCalendar.create(data.events);
 </script>
 
@@ -11,9 +12,8 @@
   <title>2023 Crypto Conference Tracker</title>
 </svelte:head>
 <header>
-  <h1 class="title">{$eventsCalendar.year}</h1>
   <svg
-    width="91"
+    width="70"
     height="18"
     viewBox="0 0 101 28"
     fill="#242424"
@@ -55,6 +55,8 @@
   <a href="https://github.com/RodrigoPolo/">Rodrigo Polo</a>
 </p>
 
+<h1 class="title">{$eventsCalendar.year}</h1>
+
 {#each $eventsCalendar.calendar as month}
   <Month {month} />
 {/each}
@@ -62,8 +64,11 @@
 <style>
   header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
+    margin-bottom: 1em;
+  }
+  .title {
     margin-bottom: 1em;
   }
   .description {

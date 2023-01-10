@@ -18,7 +18,7 @@
     const highestLine = events.sort((a, b) => (a.line > b.line ? -1 : 1))?.[0]
       ?.line;
 
-    return `${(highestLine + 2) * height + 0.5}rem`;
+    return `${(highestLine + 2) * height + 1}rem`;
   };
 </script>
 
@@ -45,15 +45,21 @@
       </div>
       <div class="events">
         {#each day.events as evt}
+          {@const extend =
+            evt.duration >= 3 &&
+            evt.duration - evt.progress >= 2 &&
+            day.current.getDay() < 4}
           <a
             href={url(evt.url)}
             target="_blank"
             rel="noreferrer"
             class="event-line"
+            class:extend
             class:lastDay={evt.isLastDay}
             class:firstDay={evt.isFirstDay}
             class:activeEvent={$eventsCalendar.active === evt.id}
-            style="background: {evt.color}; top: {(evt.line + 1) * height}rem"
+            style="background: {evt.color}; top: {(evt.line + 1.25) *
+              height}rem"
             on:mouseenter={() => {
               $eventsCalendar.active = evt.id;
             }}
@@ -63,6 +69,7 @@
           >
             <div
               class="event-name"
+              class:extend
               class:floatingName={isStartOfWeek && !evt.isLastDay}
             >
               {#if evt.isFirstDay || isStartOfMonth || isStartOfWeek}
@@ -96,7 +103,6 @@
     min-height: 100px;
     border-bottom: 1px solid #eee;
   }
-
   @media screen and (min-width: 40em) {
     .month {
       grid-template-columns: repeat(7, 1fr);
@@ -129,15 +135,23 @@
     text-decoration: none;
     border: 1px solid transparent;
   }
+  .event-line.extend {
+    overflow: visible;
+  }
   .event-name {
+    position: relative;
+    z-index: 1;
     display: block;
     color: #242424;
     text-decoration: none;
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .event-name.extend {
+    text-overflow: none;
+    overflow: visible;
+  }
   .activeEvent {
-    filter: saturate(2);
     border-top: 1px solid #242424;
     border-bottom: 1px solid #242424;
   }
