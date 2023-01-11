@@ -37,6 +37,7 @@ export type Month = {
 
 export type EventsCalendar = {
   year: number;
+  events: EventType[];
   calendar: Month[];
   active: number;
 };
@@ -59,8 +60,9 @@ const MAX_LINE_VAL = 20;
 function eventsCalendar() {
   const store = writable<EventsCalendar>({
     calendar: [],
+    events: [],
     year: new Date().getFullYear(),
-    active: 51
+    active: -1
   });
 
   function create(events: EventType[]) {
@@ -69,7 +71,8 @@ function eventsCalendar() {
 
     store.update((st) => ({
       ...st,
-      calendar: calWithEvents
+      calendar: calWithEvents,
+      events
     }));
   }
 

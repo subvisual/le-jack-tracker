@@ -65,9 +65,6 @@
             on:mouseenter={() => {
               $eventsCalendar.active = evt.id;
             }}
-            on:mouseleave={() => {
-              $eventsCalendar.active = -1;
-            }}
           >
             <div class="event-name" class:extend>
               {#if evt.isFirstDay || isStartOfMonth || isStartOfWeek}

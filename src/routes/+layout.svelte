@@ -9,7 +9,6 @@
 
 <style>
   .wrapper {
-    width: 800px;
     max-width: 90%;
     margin: 2em auto;
   }
