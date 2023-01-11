@@ -56,11 +56,12 @@
             rel="noreferrer"
             class="event-line"
             class:extend
-            class:lastDay={evt.isLastDay}
-            class:firstDay={evt.isFirstDay}
-            class:activeEvent={$eventsCalendar.active === evt.id}
-            style="background: {evt.color}; top: {(evt.line + 1.25) *
-              height}rem"
+            class:last-day={evt.isLastDay}
+            class:first-day={evt.isFirstDay}
+            class:active-event={$eventsCalendar.active === evt.id}
+            style:top="{(evt.line + 1.25) * height}rem"
+            style:--color-primary={evt.color.primary}
+            style:--color-secondary={evt.color.secondary}
             on:mouseenter={() => {
               $eventsCalendar.active = evt.id;
             }}
@@ -68,11 +69,7 @@
               $eventsCalendar.active = -1;
             }}
           >
-            <div
-              class="event-name"
-              class:extend
-              class:floatingName={isStartOfWeek && !evt.isLastDay}
-            >
+            <div class="event-name" class:extend>
               {#if evt.isFirstDay || isStartOfMonth || isStartOfWeek}
                 {evt.name}
               {:else}
@@ -135,6 +132,7 @@
     white-space: nowrap;
     text-decoration: none;
     border: 1px solid transparent;
+    background: var(--color-primary);
   }
   .event-name {
     position: relative;
@@ -154,21 +152,14 @@
       overflow: visible;
     }
   }
-  .activeEvent {
-    border-top: 1px solid #242424;
-    border-bottom: 1px solid #242424;
+  .active-event {
+    background: var(--color-secondary);
   }
-  .activeEvent.lastDay {
-    border-right: 1px solid #000;
-  }
-  .activeEvent.firstDay {
-    border-left: 1px solid #000;
-  }
-  .lastDay {
+  .last-day {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
   }
-  .firstDay {
+  .first-day {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
   }
