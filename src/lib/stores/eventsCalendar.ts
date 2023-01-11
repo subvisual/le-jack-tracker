@@ -19,7 +19,10 @@ export type EventInDay = EventType & {
   isFirstDay: boolean;
   progress: number;
   line: number;
-  color: string;
+  color: {
+    primary: string;
+    secondary: string;
+  };
 };
 
 type Day = {
@@ -40,16 +43,16 @@ export type EventsCalendar = {
 
 const MONTHS_IN_YEAR = 12;
 const COLORS = [
-  '#e4e4e7',
-  '#fecaca',
-  '#fed7aa',
-  '#fef08a',
-  '#d9f99d',
-  '#a7f3d0',
-  '#bae6fd',
-  '#c7d2fe',
-  '#e9d5ff',
-  '#fbcfe8'
+  { primary: '#e4e4e7', secondary: '#d4d4d8' },
+  { primary: '#fecaca', secondary: '#fca5a5' },
+  { primary: '#fed7aa', secondary: '#fdba74' },
+  { primary: '#fef08a', secondary: '#fde047' },
+  { primary: '#d9f99d', secondary: '#bef264' },
+  { primary: '#a7f3d0', secondary: '#6ee7b7' },
+  { primary: '#bae6fd', secondary: '#7dd3fc' },
+  { primary: '#c7d2fe', secondary: '#a5b4fc' },
+  { primary: '#e9d5ff', secondary: '#d8b4fe' },
+  { primary: '#fbcfe8', secondary: '#f9a8d4' }
 ];
 const MAX_LINE_VAL = 20;
 
