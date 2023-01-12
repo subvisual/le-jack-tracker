@@ -34,16 +34,24 @@
       {/if}
     </div>
     <div>
-      <a href={url(event.twitter)} target="_blank" rel="noreferrer">
+      <a
+        href={url(event.twitter)}
+        target="_blank"
+        rel="noreferrer"
+        class="link"
+      >
         @{twitterHandle(event.twitter)}
       </a>
-      <a href={url(event.url)} target="_blank" rel="noreferrer">Website</a>
+      <a href={url(event.url)} target="_blank" rel="noreferrer" class="link">
+        Website
+      </a>
     </div>
   {/if}
 </div>
 
 <style>
   .root {
+    display: none;
     position: sticky;
     top: 30vh;
     display: grid;
@@ -56,5 +64,13 @@
   }
   .region {
     color: var(--color-grey);
+  }
+  .link {
+    display: block;
+  }
+  @media screen and (min-width: 40em) {
+    .root {
+      display: grid;
+    }
   }
 </style>

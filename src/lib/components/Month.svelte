@@ -105,7 +105,7 @@
   .day {
     position: relative;
     min-height: 100px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
   }
   @media screen and (min-width: 40em) {
     .month {
@@ -138,7 +138,8 @@
     white-space: nowrap;
     text-decoration: none;
     border: 1px solid transparent;
-    background: var(--color-primary);
+    background-color: var(--color-primary);
+    transition: background-color 0.3s ease;
   }
   .event-name {
     position: relative;

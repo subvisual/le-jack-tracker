@@ -15,34 +15,23 @@
 </svelte:head>
 
 <Header />
-<section class="wrapper">
-  <div class="calendar">
-    <h1 class="calendar-title">{$eventsCalendar.year}</h1>
-    {#each $eventsCalendar.calendar as month}
-      <Month {month} />
-    {/each}
-  </div>
-  <div class="event-display">
-    <EventDisplay />
-  </div>
-</section>
+<main class="calendar">
+  <h1 class="calendar-title">{$eventsCalendar.year}</h1>
+  {#each $eventsCalendar.calendar as month}
+    <Month {month} />
+  {/each}
+</main>
+<div class="event-display">
+  <EventDisplay />
+</div>
 
 <style>
-  .wrapper {
-    display: grid;
-    grid-template-columns: 200px 800px 200px;
-    gap: 2em;
-    width: fit-content;
-    margin: auto;
+  .calendar {
+    background: var(--color-offwhite);
   }
   .calendar-title {
     margin-bottom: 1em;
+    line-height: 1;
     color: var(--color-offblack);
-  }
-  .calendar {
-    grid-column: 2;
-  }
-  .event-display {
-    grid-column: 3;
   }
 </style>
