@@ -42,9 +42,6 @@
     font-size: 1.25rem;
   }
   .region {
-    color: grey;
-  }
-  .links {
-    margin-top: 1rem;
+    color: var(--color-grey);
   }
 </style>

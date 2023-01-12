@@ -11,82 +11,91 @@
   });
 
   const dayBlockHeight = (events: EventInDay[]) => {
-    if (events.length < 3) {
-      return '100px';
-    }
-
     const highestLine = events.sort((a, b) => (a.line > b.line ? -1 : 1))?.[0]
       ?.line;
+
+    if (highestLine < 2) {
+      return '100px';
+    }
 
     return `${(highestLine + 2) * height + 1}rem`;
   };
 </script>
 
-<h2 class="name">{monthName}</h2>
+<div class="root">
+  <h2 class="name">{monthName}</h2>
 
-<section class="month" style="--track-height: {height}rem">
-  {#each month.days as day, monthIdx}
-    {@const isStartOfMonth = day.current.getDate() === 1}
-    {@const isStartOfWeek = day.current.getDay() === 0}
-    {@const offset = isStartOfMonth ? day.current.getDay() + 1 : '0'}
+  <section class="month" style="--track-height: {height}rem">
+    {#each month.days as day, monthIdx}
+      {@const isStartOfMonth = day.current.getDate() === 1}
+      {@const isStartOfWeek = day.current.getDay() === 0}
+      {@const offset = isStartOfMonth ? day.current.getDay() + 1 : '0'}
 
-    <div
-      class="day"
-      class:clip={day.events.length > 1}
-      style="min-height: {dayBlockHeight(day.events)}; --offset: {offset}"
-    >
-      <div class="date-line">
-        <p class="day-digit">
-          {day.current.toLocaleDateString('default', { day: '2-digit' })}
-        </p>
-        <p class="week">
-          {day.current.toLocaleDateString('default', { weekday: 'short' })}
-        </p>
+      <div
+        class="day"
+        style="min-height: {dayBlockHeight(day.events)}; --offset: {offset}"
+      >
+        <div class="date-line">
+          <p class="day-digit">
+            {day.current.toLocaleDateString('default', { day: '2-digit' })}
+          </p>
+          <p class="week">
+            {day.current.toLocaleDateString('default', { weekday: 'short' })}
+          </p>
+        </div>
+        <div class="events">
+          {#each day.events as evt}
+            {@const extend =
+              month.days[monthIdx + 1] &&
+              evt.duration >= 3 &&
+              evt.duration - evt.progress >= 2 &&
+              day.current.getDay() < 4}
+            <a
+              href={url(evt.url)}
+              target="_blank"
+              rel="noreferrer"
+              class="event-line"
+              class:extend
+              class:last-day={evt.isLastDay}
+              class:first-day={evt.isFirstDay}
+              class:active-event={$eventsCalendar.active === evt.id}
+              style:top="{(evt.line + 1.25) * height}rem"
+              style:--color-primary={evt.color.primary}
+              style:--color-secondary={evt.color.secondary}
+              on:mouseenter={() => {
+                $eventsCalendar.active = evt.id;
+              }}
+            >
+              <div class="event-name" class:extend>
+                {#if evt.isFirstDay || isStartOfMonth || isStartOfWeek}
+                  {evt.name}
+                {:else}
+                  &nbsp;
+                {/if}
+              </div>
+            </a>
+          {/each}
+        </div>
       </div>
-      <div class="events">
-        {#each day.events as evt}
-          {@const extend =
-            month.days[monthIdx + 1] &&
-            evt.duration >= 3 &&
-            evt.duration - evt.progress >= 2 &&
-            day.current.getDay() < 4}
-          <a
-            href={url(evt.url)}
-            target="_blank"
-            rel="noreferrer"
-            class="event-line"
-            class:extend
-            class:last-day={evt.isLastDay}
-            class:first-day={evt.isFirstDay}
-            class:active-event={$eventsCalendar.active === evt.id}
-            style:top="{(evt.line + 1.25) * height}rem"
-            style:--color-primary={evt.color.primary}
-            style:--color-secondary={evt.color.secondary}
-            on:mouseenter={() => {
-              $eventsCalendar.active = evt.id;
-            }}
-          >
-            <div class="event-name" class:extend>
-              {#if evt.isFirstDay || isStartOfMonth || isStartOfWeek}
-                {evt.name}
-              {:else}
-                &nbsp;
-              {/if}
-            </div>
-          </a>
-        {/each}
-      </div>
-    </div>
-  {/each}
-</section>
+    {/each}
+  </section>
+</div>
 
 <style>
+  .root {
+    display: flex;
+    gap: 1rem;
+  }
   .name {
+    position: sticky;
+    top: 1rem;
+    height: fit-content;
     display: block;
     color: #242424;
-    margin-bottom: 0.25rem;
+    line-height: 1;
   }
   .month {
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem 0;
@@ -116,7 +125,7 @@
   }
   .week {
     font-size: 0.8rem;
-    color: grey;
+    color: var(--color-grey);
   }
   .event-line {
     position: absolute;
@@ -135,7 +144,7 @@
     position: relative;
     z-index: 1;
     display: block;
-    color: #242424;
+    color: var(--color-offblack);
     text-decoration: none;
     overflow: hidden;
     text-overflow: ellipsis;

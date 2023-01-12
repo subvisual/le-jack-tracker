@@ -14,10 +14,10 @@
   <title>2023 Crypto Conference Tracker</title>
 </svelte:head>
 
-<!-- <Header /> -->
-<h1 class="calendar-title">{$eventsCalendar.year}</h1>
+<Header />
 <section class="wrapper">
   <div class="calendar">
+    <h1 class="calendar-title">{$eventsCalendar.year}</h1>
     {#each $eventsCalendar.calendar as month}
       <Month {month} />
     {/each}
@@ -30,18 +30,19 @@
 <style>
   .wrapper {
     display: grid;
-    grid-template-columns: 800px 200px;
+    grid-template-columns: 200px 800px 200px;
     gap: 2em;
     width: fit-content;
     margin: auto;
   }
   .calendar-title {
     margin-bottom: 1em;
+    color: var(--color-offblack);
   }
   .calendar {
-    grid-column: 1;
+    grid-column: 2;
   }
   .event-display {
-    grid-column: 2;
+    grid-column: 3;
   }
 </style>
