@@ -9,6 +9,11 @@
   $: online = [event?.region, event?.city, event?.country].every(
     (item) => item === 'Online'
   );
+  const formatDate = (date: string | Date) =>
+    new Date(date).toLocaleDateString('default', {
+      month: 'short',
+      day: 'numeric'
+    });
 </script>
 
 <div class="root">
@@ -18,6 +23,14 @@
       <p class="region">{event.region}</p>
       {#if !online}
         <p>{event.city}, {event.country}</p>
+      {/if}
+
+      {#if event.duration === 1}
+        <p>{formatDate(event.startDate)}</p>
+      {:else}
+        <p>
+          {formatDate(event.startDate)} - {formatDate(event.endDate)}
+        </p>
       {/if}
     </div>
     <div>
