@@ -40,6 +40,8 @@ export type EventsCalendar = {
   events: EventType[];
   calendar: Month[];
   active: number;
+  filter: string;
+  countries: string[];
 };
 
 const MONTHS_IN_YEAR = 12;
@@ -62,17 +64,25 @@ function eventsCalendar() {
     calendar: [],
     events: [],
     year: new Date().getFullYear(),
-    active: -1
+    active: -1,
+    filter: 'all',
+    countries: []
   });
 
   function create(events: EventType[]) {
     const baseCalendar = buildCalendar();
     const calWithEvents = assignEventsToCalendar(events, baseCalendar);
 
+    const countries = events
+      .map((item) => item.country)
+      .filter((c, ind, arr) => arr.indexOf(c) === ind)
+      .sort();
+
     store.update((st) => ({
       ...st,
       calendar: calWithEvents,
-      events
+      events,
+      countries
     }));
   }
 
@@ -165,6 +175,7 @@ function eventsCalendar() {
   return {
     subscribe: store.subscribe,
     set: store.set,
+    update: store.update,
     buildCalendar,
     create
   };
