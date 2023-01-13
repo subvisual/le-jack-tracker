@@ -22,7 +22,7 @@
   };
 </script>
 
-<div class="root">
+<div class="root" id={monthName}>
   <h2 class="name">{monthName}</h2>
 
   <section class="month" style="--track-height: {height}rem">
@@ -50,6 +50,9 @@
               evt.duration >= 3 &&
               evt.duration - evt.progress >= 2 &&
               day.current.getDay() < 4}
+            {@const outOfFilter =
+              evt.country !== $eventsCalendar.filter &&
+              $eventsCalendar.filter !== 'all'}
             <a
               href={url(evt.url)}
               target="_blank"
@@ -59,6 +62,7 @@
               class:last-day={evt.isLastDay}
               class:first-day={evt.isFirstDay}
               class:active-event={$eventsCalendar.active === evt.id}
+              class:irrelevant={outOfFilter}
               style:top="{(evt.line + 1.25) * height}rem"
               style:--color-primary={evt.color.primary}
               style:--color-secondary={evt.color.secondary}
@@ -140,6 +144,7 @@
     border: 1px solid transparent;
     background-color: var(--color-primary);
     transition: background-color 0.3s ease;
+    transition: opacity 0.3s ease;
   }
   .event-name {
     position: relative;
@@ -169,5 +174,8 @@
   .first-day {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
+  }
+  .irrelevant {
+    opacity: 0.3;
   }
 </style>
