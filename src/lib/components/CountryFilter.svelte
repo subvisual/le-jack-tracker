@@ -5,16 +5,19 @@
     (item) => item.country === $eventsCalendar.filter
   );
 
-  $: relevantByMonth = relevant.reduce((acc, item) => {
-    const monthName = new Date(item.startDate).toLocaleDateString('default', {
-      month: 'short'
-    });
+  $: relevantByMonth = relevant.reduce<Record<string, EventType[]>>(
+    (acc, item) => {
+      const monthName = new Date(item.startDate).toLocaleDateString('default', {
+        month: 'short'
+      });
 
-    return {
-      ...acc,
-      [monthName]: [...(acc?.[monthName] || []), item]
-    };
-  }, {} as Record<string, EventType[]>);
+      return {
+        ...acc,
+        [monthName]: [...(acc?.[monthName] || []), item]
+      };
+    },
+    {}
+  );
 </script>
 
 <div class="root">
@@ -30,8 +33,8 @@
       <p class="res-title">{relevant.length} events found</p>
 
       {#each Object.entries(relevantByMonth) as [month, evts], key}
-        <div class="res-month">
-          <a href="#{month}">{month}</a>
+        <div>
+          <a class="res-month" href="#{month}">{month}</a>
           <ul>
             {#each evts as evt}
               <li class="event-name">{evt.name}</li>
@@ -45,8 +48,8 @@
 
 <style>
   .root {
-    margin-bottom: 2rem;
-    padding-bottom: 3.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid #ddd;
   }
   .select {
@@ -61,9 +64,11 @@
   }
   .res-title {
     font-weight: 700;
+    margin-bottom: 0.5rem;
   }
   .res-month {
-    margin-bottom: 1rem;
+    display: block;
+    margin-bottom: 0.5rem;
   }
   .event-name {
     margin-bottom: 0.5rem;
