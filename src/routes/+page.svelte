@@ -1,4 +1,5 @@
 <script lang="ts">
+  import CountryFilter from '$lib/components/CountryFilter.svelte';
   import EventDisplay from '$lib/components/EventDisplay.svelte';
   import Header from '$lib/components/Header.svelte';
   import Month from '$lib/components/Month.svelte';
@@ -21,7 +22,8 @@
     <Month {month} />
   {/each}
 </main>
-<div class="event-display">
+<div class="sidebar">
+  <CountryFilter />
   <EventDisplay />
 </div>
 
@@ -33,5 +35,10 @@
     margin-bottom: 1em;
     line-height: 1;
     color: var(--color-offblack);
+  }
+  .sidebar {
+    height: fit-content;
+    position: sticky;
+    top: 5.75rem;    
   }
 </style>

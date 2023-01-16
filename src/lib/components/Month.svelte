@@ -22,8 +22,10 @@
   };
 </script>
 
-<div class="root">
-  <h2 class="name">{monthName}</h2>
+<div class="root" id={monthName}>
+  <a href="#{monthName}" class="month-name">
+    <h2 class="month-name-text">{monthName}</h2>
+  </a>
 
   <section class="month" style="--track-height: {height}rem">
     {#each month.days as day, monthIdx}
@@ -50,6 +52,9 @@
               evt.duration >= 3 &&
               evt.duration - evt.progress >= 2 &&
               day.current.getDay() < 4}
+            {@const outOfFilter =
+              evt.country !== $eventsCalendar.filter &&
+              $eventsCalendar.filter !== 'all'}
             <a
               href={url(evt.url)}
               target="_blank"
@@ -59,6 +64,7 @@
               class:last-day={evt.isLastDay}
               class:first-day={evt.isFirstDay}
               class:active-event={$eventsCalendar.active === evt.id}
+              class:irrelevant={outOfFilter}
               style:top="{(evt.line + 1.25) * height}rem"
               style:--color-primary={evt.color.primary}
               style:--color-secondary={evt.color.secondary}
@@ -86,7 +92,10 @@
     display: flex;
     gap: 1rem;
   }
-  .name {
+  .month-name {
+    text-decoration: none;
+  }
+  .month-name-text {
     position: sticky;
     top: 1rem;
     height: fit-content;
@@ -140,6 +149,7 @@
     border: 1px solid transparent;
     background-color: var(--color-primary);
     transition: background-color 0.3s ease;
+    transition: opacity 0.3s ease;
   }
   .event-name {
     position: relative;
@@ -169,5 +179,8 @@
   .first-day {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
+  }
+  .irrelevant {
+    opacity: 0.3;
   }
 </style>

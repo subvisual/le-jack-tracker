@@ -52,8 +52,6 @@
 <style>
   .root {
     display: none;
-    position: sticky;
-    top: 30vh;
     display: grid;
     gap: 0.75rem;
     height: fit-content;
