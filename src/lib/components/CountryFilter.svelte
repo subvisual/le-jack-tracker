@@ -60,7 +60,7 @@
   }
   .res-wrapper {
     max-height: 40vh;
-    overflow: scroll;
+    overflow-y: scroll;
   }
   .res-title {
     font-weight: 700;

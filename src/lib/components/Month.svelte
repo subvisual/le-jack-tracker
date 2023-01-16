@@ -23,7 +23,9 @@
 </script>
 
 <div class="root" id={monthName}>
-  <h2 class="name">{monthName}</h2>
+  <a href="#{monthName}" class="month-name">
+    <h2 class="month-name-text">{monthName}</h2>
+  </a>
 
   <section class="month" style="--track-height: {height}rem">
     {#each month.days as day, monthIdx}
@@ -90,7 +92,10 @@
     display: flex;
     gap: 1rem;
   }
-  .name {
+  .month-name {
+    text-decoration: none;
+  }
+  .month-name-text {
     position: sticky;
     top: 1rem;
     height: fit-content;
