@@ -30,7 +30,7 @@
       href="https://docs.google.com/spreadsheets/d/1UJLdKW5IymgPAmKakMvCyd35dtc8IOZ04bc0fAvp8kI/edit#gid=1160078856"
       >this calendar</a
     >, please subscribe to
-    <a href="CryptoPragmatist.com/sign-up/">his newsletter</a>
+    <a href="https://CryptoPragmatist.com/sign-up/">his newsletter</a>
   </p>
   <p class="description">
     If you need help with building products in crypto let us know at <a
