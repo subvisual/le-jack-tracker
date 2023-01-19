@@ -4,8 +4,8 @@
       width="70"
       height="18"
       viewBox="0 0 101 28"
-      fill="#242424"
       xmlns="http://www.w3.org/2000/svg"
+      class="logo-icon"
     >
       <path
         fill-rule="evenodd"
@@ -51,8 +51,11 @@
     display: block;
     margin: 0.15rem 0 1rem;
   }
+  .logo-icon {
+    fill: var(--color-primary);
+  }
   .description {
-    color: var(--color-grey);
+    color: var(--color-secondary);
     margin-bottom: 2em;
   }
 </style>

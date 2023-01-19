@@ -3,17 +3,14 @@
   import '$lib/css/app.css';
 </script>
 
-<div class="root">
+<div class="root dark">
   <slot />
 </div>
 
 <style>
   .root {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 90%;
-    margin: 2em auto;
+    background: var(--color-bg);
+    color: var(--color-primary);
   }
   @media screen and (min-width: 40em) {
     .root {

@@ -55,7 +55,8 @@
   .select {
     margin-bottom: 1rem;
     padding: 4px 8px;
-    border: 1px solid var(--color-offblack);
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
     border-radius: 4px;
   }
   .res-wrapper {

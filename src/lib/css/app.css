@@ -4,11 +4,25 @@
   --color-offblack: #242424;
   --color-offwhite: #fefefe;
   --color-grey: #808080;
+
+  --color-primary: var(--color-offblack);
+  --color-secondary: var(--color-grey);
+  --color-bg: var(--color-offwhite);
+  --color-tertiary: blue;
+}
+
+.dark {
+  --color-primary: #f5f5f5;
+  --color-secondary: #a3a3a3;
+  --color-bg: #171717;
+  --color-tertiary: #818cf8;
 }
 
 body {
   font-family: 'IBM Plex Mono', monospace;
   line-height: 1.4;
-  background: var(--color-offwhite);
-  color: var(--color-offblack);
+}
+
+a {
+  color: var(--color-tertiary);
 }

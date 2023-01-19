@@ -100,7 +100,7 @@
     top: 1rem;
     height: fit-content;
     display: block;
-    color: #242424;
+    color: var(--color-primary);
     line-height: 1;
   }
   .month {
@@ -114,7 +114,7 @@
   .day {
     position: relative;
     min-height: 100px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--color-secondary);
   }
   @media screen and (min-width: 40em) {
     .month {
@@ -134,7 +134,7 @@
   }
   .week {
     font-size: 0.8rem;
-    color: var(--color-grey);
+    color: var(--color-secondary)
   }
   .event-line {
     position: absolute;
