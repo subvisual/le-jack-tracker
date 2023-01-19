@@ -19,10 +19,11 @@ export type EventInDay = EventType & {
   isFirstDay: boolean;
   progress: number;
   line: number;
-  color: {
+  /* color: {
     primary: string;
     secondary: string;
-  };
+  }; */
+  color: number;
 };
 
 type Day = {
@@ -45,18 +46,7 @@ export type EventsCalendar = {
 };
 
 const MONTHS_IN_YEAR = 12;
-const COLORS = [
-  { primary: '#e4e4e7', secondary: '#d4d4d8' },
-  { primary: '#fecaca', secondary: '#fca5a5' },
-  { primary: '#fed7aa', secondary: '#fdba74' },
-  { primary: '#fef08a', secondary: '#fde047' },
-  { primary: '#d9f99d', secondary: '#bef264' },
-  { primary: '#a7f3d0', secondary: '#6ee7b7' },
-  { primary: '#bae6fd', secondary: '#7dd3fc' },
-  { primary: '#c7d2fe', secondary: '#a5b4fc' },
-  { primary: '#e9d5ff', secondary: '#d8b4fe' },
-  { primary: '#fbcfe8', secondary: '#f9a8d4' }
-];
+const COLORS = 10;
 const MAX_LINE_VAL = 20;
 
 function eventsCalendar() {
@@ -97,12 +87,12 @@ function eventsCalendar() {
   }
 
   function assignEventsToCalendar(events: EventType[], calendar: Month[]) {
-    let colorIdx = 0;
+    let colorIdx = 1;
 
     for (let i = 0; i < events.length; i++) {
       const event: EventInDay = {
         ...events[i],
-        color: COLORS[colorIdx],
+        color: colorIdx,
         isFirstDay: false,
         isLastDay: false,
         progress: 0,
@@ -141,7 +131,7 @@ function eventsCalendar() {
         dayIdx++;
       }
 
-      colorIdx = colorIdx === COLORS.length - 1 ? 0 : colorIdx + 1;
+      colorIdx = colorIdx === COLORS ? 1 : colorIdx + 1;
     }
 
     return calendar;

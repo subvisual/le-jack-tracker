@@ -1,14 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
 
 :root {
-  --color-offblack: #242424;
-  --color-offwhite: #fefefe;
-  --color-grey: #808080;
-
-  --color-primary: var(--color-offblack);
-  --color-secondary: var(--color-grey);
-  --color-bg: var(--color-offwhite);
+  --color-primary: #242424;
+  --color-secondary: #808080;
+  --color-bg: #fefefe;
   --color-tertiary: blue;
+
+  --line-primary-1: #e4e4e7;
+  --line-secondary-1: #d4d4d8;
+  --line-primary-2: #fecaca;
+  --line-secondary-2: #fca5a5;
+  --line-primary-3: #fed7aa;
+  --line-secondary-3: #fdba74;
+  --line-primary-4: #fef08a;
+  --line-secondary-4: #fde047;
+  --line-primary-5: #d9f99d;
+  --line-secondary-5: #bef264;
+  --line-primary-6: #a7f3d0;
+  --line-secondary-6: #6ee7b7;
+  --line-primary-7: #bae6fd;
+  --line-secondary-7: #7dd3fc;
+  --line-primary-8: #c7d2fe;
+  --line-secondary-8: #a5b4fc;
+  --line-primary-9: #e9d5ff;
+  --line-secondary-9: #d8b4fe;
+  --line-primary-10: #fbcfe8;
+  --line-secondary-10: #f9a8d4;
 }
 
 .dark {
@@ -16,6 +33,27 @@
   --color-secondary: #a3a3a3;
   --color-bg: #171717;
   --color-tertiary: #818cf8;
+
+  --line-primary-1: #e4e4e7;
+  --line-secondary-1: #d4d4d8;
+  --line-primary-2: #fecaca;
+  --line-secondary-2: #fca5a5;
+  --line-primary-3: #fed7aa;
+  --line-secondary-3: #fdba74;
+  --line-primary-4: #fef08a;
+  --line-secondary-4: #fde047;
+  --line-primary-5: #d9f99d;
+  --line-secondary-5: #bef264;
+  --line-primary-6: #a7f3d0;
+  --line-secondary-6: #6ee7b7;
+  --line-primary-7: #bae6fd;
+  --line-secondary-7: #7dd3fc;
+  --line-primary-8: #c7d2fe;
+  --line-secondary-8: #a5b4fc;
+  --line-primary-9: #e9d5ff;
+  --line-secondary-9: #d8b4fe;
+  --line-primary-10: #fbcfe8;
+  --line-secondary-10: #f9a8d4;
 }
 
 body {

@@ -3,7 +3,7 @@
   import '$lib/css/app.css';
 </script>
 
-<div class="root dark">
+<div class="root">
   <slot />
 </div>
 

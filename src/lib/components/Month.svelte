@@ -66,8 +66,8 @@
               class:active-event={$eventsCalendar.active === evt.id}
               class:irrelevant={outOfFilter}
               style:top="{(evt.line + 1.25) * height}rem"
-              style:--color-primary={evt.color.primary}
-              style:--color-secondary={evt.color.secondary}
+              style:--bg-primary="var(--line-primary-{evt.color})"
+              style:--bg-secondary="var(--line-secondary-{evt.color})"
               on:mouseenter={() => {
                 $eventsCalendar.active = evt.id;
               }}
@@ -134,7 +134,7 @@
   }
   .week {
     font-size: 0.8rem;
-    color: var(--color-secondary)
+    color: var(--color-secondary);
   }
   .event-line {
     position: absolute;
@@ -147,7 +147,7 @@
     white-space: nowrap;
     text-decoration: none;
     border: 1px solid transparent;
-    background-color: var(--color-primary);
+    background-color: var(--bg-primary);
     transition: background-color 0.3s ease;
     transition: opacity 0.3s ease;
   }
@@ -155,7 +155,7 @@
     position: relative;
     z-index: 1;
     display: block;
-    color: var(--color-offblack);
+    color: var(--color-primary);
     text-decoration: none;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -170,7 +170,7 @@
     }
   }
   .active-event {
-    background: var(--color-secondary);
+    background: var(--bg-secondary);
   }
   .last-day {
     border-top-right-radius: 12px;
