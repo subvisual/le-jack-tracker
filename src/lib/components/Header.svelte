@@ -1,3 +1,12 @@
+<script lang="ts">
+  import { enhance } from '$app/forms';
+  import theme, { toggleTheme } from '$lib/stores/theme';
+
+  function handleThemeSubmit() {
+    toggleTheme();
+  }
+</script>
+
 <header class="header">
   <a class="logo" href="https://finiam.com/">
     <svg
@@ -14,6 +23,19 @@
       />
     </svg>
   </a>
+
+  <form
+    method="POST"
+    use:enhance={() => {
+      toggleTheme();
+    }}
+  >
+    <button
+      formaction="/?/setTheme&theme={$theme === 'dark' ? 'light' : 'dark'}"
+    >
+      set to {$theme === 'dark' ? 'light' : 'dark'}
+    </button>
+  </form>
 
   <p class="description">
     If you're a founder looking for pre-seed or seed investment, please reach
