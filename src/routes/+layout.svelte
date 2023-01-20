@@ -9,8 +9,9 @@
 
 <style>
   .root {
-    background: var(--color-bg);
+    background-color: var(--color-bg);
     color: var(--color-primary);
+    transition: background-color 0.2s ease;
   }
   @media screen and (min-width: 40em) {
     .root {

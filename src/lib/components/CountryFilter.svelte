@@ -59,6 +59,9 @@
     color: var(--color-primary);
     border-radius: 4px;
   }
+  .select option {
+    color: var(--color-bg);
+  }
   .res-wrapper {
     max-height: 40vh;
     overflow-y: scroll;

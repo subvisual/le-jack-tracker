@@ -155,7 +155,7 @@
     position: relative;
     z-index: 1;
     display: block;
-    color: var(--color-primary);
+    color: var(--color-event-name);
     text-decoration: none;
     overflow: hidden;
     text-overflow: ellipsis;

@@ -19,10 +19,6 @@ export type EventInDay = EventType & {
   isFirstDay: boolean;
   progress: number;
   line: number;
-  /* color: {
-    primary: string;
-    secondary: string;
-  }; */
   color: number;
 };
 
