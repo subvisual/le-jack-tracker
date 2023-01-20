@@ -5,8 +5,6 @@
 </script>
 
 <div class="root" data-theme={$theme} id="js-theme-wrapper">
-  {$theme}
-
   <slot />
 </div>
 
