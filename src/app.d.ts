@@ -3,11 +3,9 @@
 // and what to do when importing types
 declare namespace App {
   // interface Error {}
-  interface Locals {
-    theme: 'dark' | 'light';
-  }
+  // interface Locals {}
   interface PageData {
-	theme: 'dark' | 'light';
+    theme: Theme;
   }
   // interface Platform {}
 }

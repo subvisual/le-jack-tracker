@@ -2,10 +2,9 @@
   import '$lib/css/ress.css';
   import '$lib/css/app.css';
   import theme from '$lib/stores/theme';
-  import { page } from '$app/stores';
 </script>
 
-<div class="root" data-theme={$theme}>
+<div class="root" data-theme={$theme} id="js-theme-wrapper">
   {$theme}
 
   <slot />
