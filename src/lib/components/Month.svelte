@@ -114,7 +114,7 @@
   .day {
     position: relative;
     min-height: 100px;
-    border-bottom: 1px solid var(--color-secondary);
+    border-bottom: 1px solid #ddd;
   }
   @media screen and (min-width: 40em) {
     .month {
@@ -146,7 +146,6 @@
     overflow: hidden;
     white-space: nowrap;
     text-decoration: none;
-    border: 1px solid transparent;
     background-color: var(--bg-primary);
     transition: background-color 0.3s ease;
     transition: opacity 0.3s ease;
